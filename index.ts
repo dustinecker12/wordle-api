@@ -8,6 +8,10 @@ type Word = {
   secret: string;
 };
 
+app.get('/', (req: Request, res: Response) => {
+  res.send('My Wordle API');
+});
+
 app.get('/secret', (req: Request, res: Response) => {
   const randomIndex = Math.floor(Math.random() * wordList.length) + 1;
   const word = wordList[randomIndex];
