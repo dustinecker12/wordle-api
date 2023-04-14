@@ -1,8 +1,10 @@
 import express, { Application, Request, Response } from 'express';
+import cors from 'cors';
 import wordList from './wordList';
 
-const app: Application = express();
 const PORT = 8000;
+const app: Application = express();
+app.use(cors());
 
 type Word = {
   secret: string;
