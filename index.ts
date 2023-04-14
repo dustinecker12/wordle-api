@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from 'express';
 import wordList from './wordList';
 
 const app: Application = express();
-const PORT = process.env.PORT ?? 8000;
+const PORT = 8000;
 
 type Word = {
   secret: string;
